@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap" rel="stylesheet" />
+  <title>Dev server</title>
+</head>
+
+<body">
+  <header class="header container">
+    <nav>
+      <ul class="header__menu">
+        <li>
+          <a class="header__link" href="#about">About</a>
+        </li>
+        <li>
+          <a class="header__link" href="#featured">Work</a>
+        </li>
+        <li>
+          <a class="header__link" href="#contact">Contact</a>
+        </li>
+        <li class="header__line"></li>
+        <li>
+          <button id="theme-toggle" class="header__sun">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75
+                  0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894
+                  6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06
+                  1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0
+                  010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0
+                  001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12
+                  18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112
+                  18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0
+                  001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0
+                  010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0
+                  001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+            </svg>
+
+          </button>
+        </li>
+        <li>
+          <a class="header__resume btn" href="#">Resume</a>
+        </li>
+      </ul>
+      <button class="header__bars">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0
+                013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010
+                1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75
+                0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+        </svg>
+
+      </button>
+    </nav>
+  </header>
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav">
+    <nav>
+      <ul class="mobile-nav__menu">
+        <li>
+          <a class="mobile-nav__link" href="#about">About</a>
+        </li>
+        <li>
+          <a class="mobile-nav__link" href="#featured">Work</a>
+        </li>
+        <li>
+          <a class="mobile-nav__link" href="#contact">Contact</a>
+        </li>
+        <li class="mobile-nav__link-line"></li>
+        <li>
+          <button id="theme-toggle" class="mobile-nav__sun">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75
+                  0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894
+                  6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06
+                  1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0
+                  010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0
+                  001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12
+                  18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112
+                  18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0
+                  001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0
+                  010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0
+                  001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+            </svg>
+
+          </button>
+        </li>
+        <li>
+          <a class="mobile-nav__btn btn" href="#">Resume</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- End of Mobile Navigation -->
+  <main>
+    <section class="hero container">
+      <img class="hero__img" src="/portrait.jpeg" alt="Profile picture">
+      <h2 class="hero__subtitle">Hello, I'm Rue</h2>
+      <h1 class="hero__title">FULL-STACK <br> WEB DEVELOPER</h1>
+      <p class="hero__description">A passionate <strong>Fullstack</strong>
+        web developer. &nbsp; Student of
+        <strong>"JAVA Institute"</strong> <br> Sri Lanka.
+      </p>
+      <a class="hero__btn btn" href="mailto:ruvindugamage@gmail.com" target="_blank">Reach out</a>
+    </section>
+    <section id="about" class="about container section">
+      <div class="about__content">
+        <h2 class="about__title">About</h2>
+        <p class="about__description">I am a talented & passionate
+          <strong>FULL-STACK web developer.</strong> I
+          currently study at <strong>"JAVA Institute",</strong> the
+          college with the most
+          advanced software engineering degree in Sri Lanka.
+        </p>
+        <p class="about__description"> I will design and develop a
+          beautiful & interactive web
+          application for your business or any other need using HTML, CSS
+          & JavaScript. </p>
+        <p class="about__description">Lorem ipsum <a href="#">dolor sit
+            amet consectetur</a> adipisicing elit. deserunt
+          natus amet voluptas!</p>
+        <hr class="about__hr">
+        <h3 class="about__subtitle">Technologies</h3>
+        <div class="about__ul-container">
+          <ul class="about__ul">
+            <li class="about__list">HTML</li>
+            <li class="about__list">CSS</li>
+            <li class="about__list">JavaScript</li>
+          </ul>
+          <ul class="about__ul">
+            <li class="about__list">SQL</li>
+            <li class="about__list">PHP</li>
+            <li class="about__list">TailwindCSS</li>
+          </ul>
+        </div>
+      </div>
+      <div class="about__img-wrapper">
+        <img class="about__image lazy loading" src="https://fakeimg.pl/652x682" data-src="/portrait.jpeg"
+          alt="Profile picture" />
+      </div>
+    </section>
+    <section id="featured" class="featured container section">
+      <h3 class="featured__subtitle">Featured project</h3>
+      <div class="featured__wrapper">
+        <h2 class="featured__title">lorem ipusm dolor</h2>
+        <a class="featured__link" href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24
+                  24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0
+                    01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0
+                    00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+          </svg>
+        </a>
+      </div>
+      <p class="featured__description">Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Ipsa soluta beatae
+        asperiores natus minima omnis amet voluptates illum iure. Cumque
+        molestias ?
+      </p>
+      <div class="featured__info-container">
+        <div>
+          <h3 class="featured__lable">Tech stack</h3>
+          <ul class="featured__tech-stack">
+            <li class="featured__info">TailwindCSS</li>
+            <li class="featured__info">ReactJS</li>
+            <li class="featured__info">React-hook-form</li>
+            <li class="featured__info">NextJS</li>
+            <li class="featured__info">Axios</li>
+            <li class="featured__info">Superbase</li>
+            <li class="featured__info">Stripe</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="featured__lable">Project type</h3>
+          <p class="featured__info">Fullstack-Jumpstack</p>
+        </div>
+        <div>
+          <h3 class="featured__lable">Timeline</h3>
+          <p class="featured__info">April 2023 - Present</p>
+        </div>
+      </div>
+      <div class="featured__img-container">
+        <div class="featured__img-wrapper">
+          <img class="lazy loading" src="https://fakeimg.pl/1920x913" data-src="/projects.png" alt="Slaying the dragon" hero />
+        </div>
+        <div class="featured__img-wrapper">
+          <img class="lazy loading" src="https://fakeimg.pl/1920x913" data-src="/projects.png" alt="Slaying the dragon" courses />
+        </div>
+        <div class="featured__img-wrapper">
+          <img class="lazy loading" src="https://fakeimg.pl/1920x913" data-src="/projects.png" alt="Slaying the dragon" pricing />
+        </div>
+        <div class="featured__img-wrapper">
+          <img class="lazy loading" src="https://fakeimg.pl/1920x913" data-src="/projects.png" alt="Slaying the dragon" features />
+        </div>
+        <div class="featured__img-wrapper">
+          <img class="lazy loading" src="https://fakeimg.pl/1920x913" data-src="/projects.png" alt="Slaying the dragon" faqs />
+        </div>
+        <div class="featured__img-wrapper">
+          <img class="lazy loading" src="https://fakeimg.pl/1920x913" data-src="/projects.png" alt="Slaying the dragon" blog />
+        </div>
+        <div class="featured__img-wrapper">
+          <img class="lazy loading" src="https://fakeimg.pl/1920x913" data-src="/projects.png" alt="Slaying the dragon" sign-in />
+        </div>
+        <div class="featured__img-wrapper">
+          <img class="lazy loading" src="https://fakeimg.pl/1920x913" data-src="/projects.png" alt="Slaying the dragon" dashboard />
+        </div>
+      </div>
+    </section>
+    <section class="work container section">
+      <h2 class="work__title">Projects</h2>
+      <p class="work__description">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur corporis minus qui suscipit voluptas, dolor
+        est, beatae minima ut doloribus magnam. Ipsum obcaecati tempore laboriosam vero labore atque omnis vitae!
+      </p>
+      <div class="work__container">
+        <!-- project 1 -->
+        <h3 class="work__project-title">Wax Motif</h3>
+        <div class="work__img-wrapper work__image1">
+          <img class="lazy loading" src="https://fakeimg.pl/900" data-src="/waxmoney1.png" alt="Wax motif website">
+        </div>
+        <div class="work__project work__content1">
+          <h3 class="work__project-subtitle">Wax Motif</h3>
+          <p class="work__project-description1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, enim iure? Nisi fuga doloribus culpa?
+          </p>
+          <p class="work__project-description2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rem harum commodi odit iure atque et qui,
+            voluptate nobis. Reprehenderit, ipsum nesciunt delectus dolor necessitatibus et ratione officia quisquam.
+            Modi?
+          </p>
+          <a class="btn work__project-btn" href="#">Website</a>
+        </div>
+        <!-- project 2 -->
+        <h3 class="work__project-title">Draze Force</h3>
+        <div class="work__img-wrapper work__image2">
+          <img class="lazy loading" src="https://fakeimg.pl/900" data-src="/waxmoney2.png" alt="Wax motif website">
+        </div>
+        <div class="work__project work__content2">
+          <h3 class="work__project-subtitle">Draze Force</h3>
+          <p class="work__project-description1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, enim iure? Nisi fuga doloribus culpa?
+          </p>
+          <p class="work__project-description2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rem harum commodi odit iure atque et qui,
+            voluptate nobis. Reprehenderit, ipsum nesciunt delectus dolor necessitatibus et ratione officia quisquam.
+            Modi?
+          </p>
+          <a class="btn work__project-btn" href="#">Website</a>
+        </div>
+        <!-- project 3 -->
+        <h3 class="work__project-title">Artren</h3>
+        <div class="work__img-wrapper work__image3">
+          <img class="lazy loading" src="https://fakeimg.pl/900" data-src="/waxmoney3.png" alt="Wax motif website">
+        </div>
+        <div class="work__project work__content3">
+          <h3 class="work__project-subtitle">Artren</h3>
+          <p class="work__project-description1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, enim iure? Nisi fuga doloribus culpa?
+          </p>
+          <p class="work__project-description2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rem harum commodi odit iure atque et qui,
+            voluptate nobis. Reprehenderit, ipsum nesciunt delectus dolor necessitatibus et ratione officia quisquam.
+            Modi?
+          </p>
+          <a class="btn work__project-btn" href="#">Website</a>
+        </div>
+        <!-- project 4 -->
+        <h3 class="work__project-title">Platform Pro</h3>
+        <div class="work__img-wrapper work__image4">
+          <img class="lazy loading" src="https://fakeimg.pl/900" data-src="/waxmoney4.png" alt="Wax motif website">
+        </div>
+        <div class="work__project work__content4">
+          <h3 class="work__project-subtitle">Platform Pro</h3>
+          <p class="work__project-description1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, enim iure? Nisi fuga doloribus culpa?
+          </p>
+          <p class="work__project-description2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rem harum commodi odit iure atque et qui,
+            voluptate nobis. Reprehenderit, ipsum nesciunt delectus dolor necessitatibus et ratione officia quisquam.
+            Modi?
+          </p>
+          <a class="btn work__project-btn" href="#">Website</a>
+        </div>
+        <!-- project 5 -->
+        <h3 class="work__project-title">Wallys Vegan</h3>
+        <div class="work__img-wrapper work__image5">
+          <img class="lazy loading" src="https://fakeimg.pl/900" data-src="/waxmoney5.png" alt="Wax motif website">
+        </div>
+        <div class="work__project work__content5">
+          <h3 class="work__project-subtitle">Wallys Vegan</h3>
+          <p class="work__project-description1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, enim iure? Nisi fuga doloribus culpa?
+          </p>
+          <p class="work__project-description2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rem harum commodi odit iure atque et qui,
+            voluptate nobis. Reprehenderit, ipsum nesciunt delectus dolor necessitatibus et ratione officia quisquam.
+            Modi?
+          </p>
+          <a class="btn work__project-btn" href="#">Website</a>
+        </div>
+        <!-- project 6 -->
+        <h3 class="work__project-title">Old Portfolio</h3>
+        <div class="work__img-wrapper work__image6">
+          <img class="lazy loading" src="https://fakeimg.pl/900" data-src="/waxmoney6.png" alt="Wax motif website">
+        </div>
+        <div class="work__project work__content6">
+          <h3 class="work__project-subtitle">Old Portfolio</h3>
+          <p class="work__project-description1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, enim iure? Nisi fuga doloribus culpa?
+          </p>
+          <p class="work__project-description2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rem harum commodi odit iure atque et qui,
+            voluptate nobis. Reprehenderit, ipsum nesciunt delectus dolor necessitatibus et ratione officia quisquam.
+            Modi?
+          </p>
+          <a class="btn work__project-btn" href="#">Website</a>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact container section">
+      <h2 class="contact__title">Get in contact</h2>
+      <p class="contact__description">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit amet dolore aliquam optio perferendis commodi
+        quam est facere eaque reprehenderit sed esse sequi modi magnam illo unde eveniet, deserunt voluptatem.
+      </p>
+      <a class="contact__btn btn" href="mailto:ruvindugamage@gmail.com" target="_blank">Reach Out</a>
+    </section>
+  </main>
+  <footer class="footer container section">
+    <h3 class="footer__title">~ Rue Angevin ~</h3>
+  </footer>
+  <script type="module" src="./src/main.js"></script>
+  </body>
+
+</html>
